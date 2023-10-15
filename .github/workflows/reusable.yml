@@ -7,9 +7,9 @@ on:
         required: false
         default: dist
         type: string
-      #secrets: # secrets are not working here, come back to this later
-      #  password:
-      #    required: true
+    secrets:
+      password:
+        required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,6 +23,6 @@ jobs:
       - name: Output information
         run: |
           echo "Deploying & uploading..."
-      #- name: Output secret
-      #  run: |    
-      #    echo ${{ secrets.password }}
+      - name: Output secret
+        run: |    
+          echo ${{ secrets.password }}
