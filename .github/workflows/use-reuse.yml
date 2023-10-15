@@ -72,7 +72,7 @@ jobs:
     with:
       artifact-name: dist-files
     secrets:
-      some-secret: ${{ secrets.SOME_SECRET }}
+      some-secret: teste #${{ secrets.SOME_SECRET }}
   report:
     needs: [lint, deploy]
     if: failure()

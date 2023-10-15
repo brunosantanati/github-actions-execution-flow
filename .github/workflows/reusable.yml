@@ -9,8 +9,7 @@ on:
         type: string
       secrets:
         some-secret:
-          required: false
-          type: string
+          required: true
 jobs:
   deploy:
     runs-on: ubuntu-latest
