@@ -8,7 +8,7 @@ on:
         default: dist
         type: string
     secrets:
-      password:
+      some-secret:
         required: true
 jobs:
   deploy:
@@ -25,4 +25,4 @@ jobs:
           echo "Deploying & uploading..."
       - name: Output secret
         run: |    
-          echo ${{ secrets.password }}
+          echo ${{ secrets.some-secret }}
